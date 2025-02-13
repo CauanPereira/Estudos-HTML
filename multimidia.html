@@ -1,25 +1,98 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Declara o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva em dispositivos móveis -->
+    <title>GoogleGlass</title> <!-- Define o título da página -->
+    <link rel="stylesheet" href="_css/estilo.css"> <!-- Importa o arquivo CSS externo para 
+    estilização -->
+    <link rel="stylesheet" href="_css/media.css">
+</head>
 
-[AQUI ENTRA UMA FOTO]
+<script language="javascript" src = "_javascript/funcoes.js"></script>
+<body>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+    <div id="interface"> <!-- Container principal da página -->
 
-Glass > Multimídia
-Sons e Vídeos
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+        <header id="cabecalho"> <!-- Cabeçalho do site -->
 
+         <hgroup> <!-- Agrupa títulos relacionados -->
+            <h1>Google Glass</h1> <!-- Título principal da página -->
+            <h2>A revolução do Google está chegando</h2> <!-- Subtítulo -->
+        </hgroup>
 
-Áudio e Vídeo
+        <img id="icone" src="_imagens/multimidia.png" alt=""> <!-- Imagem do ícone -->
+        <nav id="menu"> <!-- Barra de navegação -->
+            <h1>Menu Principal</h1> <!-- Título do menu -->
+            <ul type="disc"> <!-- Lista não ordenada -->
 
-[AQUI ENTRA UM VÍDEO]
-[AQUI ENTRA UM ÁUDIO]
+                <li onmouseover="MudarFoto('_imagens/home.png')" onmouseout="MudarFoto('_imagens/multimidia.png')"> <a href="index.html"> Home</a></li> <!-- Link para a página inicial -->
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+                <li onmouseover="MudarFoto('_imagens/especificacoes.png')" onmouseout="MudarFoto('_imagens/multimidia.png')"> <a href="specs.html"> Especificações</a></li> <!-- Link para a página de especificações -->
+
+                <li onmouseover="MudarFoto('_imagens/fotos.png')" onmouseout="MudarFoto('_imagens/multimidia.png')"> <a href="fotos.html"> Fotos</a></li> <!-- Link para a página de fotos -->
+                
+                <li onmouseover="MudarFoto('_imagens/multimidia.png')" onmouseout="MudarFoto('_imagens/multimidia.png')"> <a href="multimidia.html"> Multimídia</a></li> <!-- Link para a página de multimídia -->
+
+                <li onmouseover="MudarFoto('_imagens/contato.png')" onmouseout="MudarFoto('_imagens/multimidia.png')"> <a href="fale-conosco.html">Fale conosco</a></li> <!-- Link para a página de contato -->
+            </ul>
+        </nav>
+        
+        </header>
+
+        <section id="corpo-full">
+
+            <article id="noticia-principal"> <!-- Artigo principal -->
+    
+                <header id="cabecalho-artigo">
+    
+                    <hgroup> <!-- Agrupa títulos do artigo -->
+    
+                        <h3 class="esquerda">Glass > Multimídia</h3>
+                        <h1>Sons e Vídeos</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="direita"><i>Atualizado em 01/Maio/2013</i></h3>
+                    </hgroup>
+    
+                </header>
+
+                <div id="tv-radio">
+
+                    <audio id="musica" controls>
+
+                        <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+                        Desculpe, mas não foi possivel carregar o audio
+                    </audio>
+                    
+                    <video poster="_imagens/video-mini03.jpg" id="filme" controls>
+
+                        <source src="_media/getting-started.mp4" type="video/mp4"/>
+                        Desculpe, mas não foi possivel carregar o video
+                    </video>
+
+                    <!--
+                         <video id="filme2" controls>
+
+                            <source src="_media/how-it-feels.mp4" type="video/mp4">
+                            Desculpe, mas não foi possivel carregar o video
+                        </video>
+
+                        <video id="filme3" controls>
+
+                            <source src="_media/one-day.mp4" type="video/mp4">
+                            Desculpe, mas não foi possivel carregar o video
+                        </video>
+
+                    -->
+                   
+                </div>
+
+            </article>
+        </section>     
+        <footer id="rodape"> <!-- Rodapé da página -->
+            <p>Copyright 2013 - by Gustavo Guanabara <br> <br> <a href="https://www.facebook.com/CursosEmVideo/?locale=pt_BR" target="_blank">Facebook</a>  |<a href="https://x.com/cursosemvideo" target="_blank">Twitter</a> </p>
+        </footer>
+</div>
+
+</body>
+</html>
