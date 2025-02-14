@@ -6,6 +6,14 @@
     <title>GoogleGlass</title> <!-- Define o título da página -->
     <link rel="stylesheet" href="_css/estilo.css"> <!-- Importa o arquivo CSS externo para estilização -->
     <link rel="stylesheet" href="_css/form.css">
+    <script>
+        function calc_total(){
+
+            var qtd =  parseInt(document.getElementById('cQtd').value);
+            tot =qtd * 1500;
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
 </head>
 
 <script language="javascript" src = "_javascript/funcoes.js"></script>
@@ -15,27 +23,27 @@
 
         <header id="cabecalho"> <!-- Cabeçalho do site -->
 
-         <hgroup> <!-- Agrupa títulos relacionados -->
-            <h1>Google Glass</h1> <!-- Título principal da página -->
-            <h2>A revolução do Google está chegando</h2> <!-- Subtítulo -->
-        </hgroup>
+            <hgroup> <!-- Agrupa títulos relacionados -->
+                <h1>Google Glass</h1> <!-- Título principal da página -->
+                <h2>A revolução do Google está chegando</h2> <!-- Subtítulo -->
+            </hgroup>
 
-        <img id="icone" src="_imagens/contato.png" alt=""> <!-- Imagem do ícone -->
-        <nav id="menu"> <!-- Barra de navegação -->
-            <h1>Menu Principal</h1> <!-- Título do menu -->
-            <ul type="disc"> <!-- Lista não ordenada -->
+            <img id="icone" src="_imagens/contato.png" alt=""> <!-- Imagem do ícone -->
+            <nav id="menu"> <!-- Barra de navegação -->
+                <h1>Menu Principal</h1> <!-- Título do menu -->
+                <ul type="disc"> <!-- Lista não ordenada -->
 
-                <li onmouseover="MudarFoto('_imagens/home.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="index.html"> Home</a></li> <!-- Link para a página inicial -->
+                    <li onmouseover="MudarFoto('_imagens/home.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="index.html"> Home</a></li> <!-- Link para a página inicial -->
 
-                <li onmouseover="MudarFoto('_imagens/especificacoes.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="specs.html"> Especificações</a></li> <!-- Link para a página de especificações -->
+                    <li onmouseover="MudarFoto('_imagens/especificacoes.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="specs.html"> Especificações</a></li> <!-- Link para a página de especificações -->
 
-                <li onmouseover="MudarFoto('_imagens/fotos.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="fotos.html"> Fotos</a></li> <!-- Link para a página de fotos -->
-                
-                <li onmouseover="MudarFoto('_imagens/multimidia.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="multimidia.html"> Multimídia</a></li> <!-- Link para a página de multimídia -->
+                    <li onmouseover="MudarFoto('_imagens/fotos.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="fotos.html"> Fotos</a></li> <!-- Link para a página de fotos -->
+                    
+                    <li onmouseover="MudarFoto('_imagens/multimidia.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="multimidia.html"> Multimídia</a></li> <!-- Link para a página de multimídia -->
 
-                <li onmouseover="MudarFoto('_imagens/contato.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="fale-conosco.html">Fale conosco</a></li> <!-- Link para a página de contato -->
-            </ul>
-        </nav>
+                    <li onmouseover="MudarFoto('_imagens/contato.png')" onmouseout="MudarFoto('_imagens/contato.png')"> <a href="fale-conosco.html">Fale conosco</a></li> <!-- Link para a página de contato -->
+                </ul>
+            </nav>
         
         </header>
 
@@ -55,56 +63,134 @@
 
                 </header>
 
-                <form action="">
+                <form method="post" id="fContato" action="cauangame1.0@gmail.com" oninput="calc_total();">
 
                     <fieldset id="usuario">
 
-                        <legend>Identificação do Usuário</legend>
+                        <legend id="idUsuario">Identificação do Usuário</legend>
 
-                        <p> <label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="10"
-                        maxlength="30" placeholder="Nome Completo"></p>
+                        <p> 
+                            <label for="cNome">Nome:</label>
+                            <input type="text" name="tNome" id="cNome" size="10"
+                            maxlength="30" placeholder="Nome Completo">
+                        </p>
 
-                        <p> <label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="10" maxlength="10" placeholder="10 digitos"
-                        ></p>
+                        <p> 
+                            <label for="cSenha">Senha:</label>
+                            <input type="password" name="tSenha" id="cSenha" size="10" maxlength="10" placeholder="10 digitos">
+                        </p>
 
-                        <p> <label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="30" placeholder="Ex: ...@gmail.com"></p>
+                        <p> 
+                            <label for="cEmail">E-mail:</label> 
+                            <input type="email" name="tEmail" id="cEmail" size="20" maxlength="30" placeholder="Ex: ...@gmail.com">
+                        </p>
 
                         <fieldset id="sexo">
+
                             <legend>Sexo</legend>
-                            <input type="radio" name="tSexo" id="cMan" checked> <label for="cMan">Masculino</label> <br>
-                            <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+                            <input type="radio" name="tSexo" id="cMan" checked> 
+                            <label for="cMan">Masculino</label> <br>
+                            <input type="radio" name="tSexo" id="cFem">
+                            <label for="cFem">Feminino</label>
                         </fieldset> 
 
-                        <p><label for="cData">Data de Nascimento:</label> <input type="date" name="tData" id="cData"></p>
+                        <p>
+                            <label for="cData">Data de Nascimento:</label>
+                            <input type="date" name="tData" id="cData">
+                        </p>
+
                     </fieldset>
                     
                     <fieldset id="endereco">
 
                         <legend>Endereço do Usuário</legend>
 
-                        <p><label for="cLog">Logradouro:</label> <input type="text" name="tLog" id="cLog" placeholder="Ex: Rua, av, Trav"></p> 
-                        <p><label for="cNum">Número:</label> <input type="text" name="tNum" id="cNum" placeholder="Ex:100"></p> 
-                        <p><label for="cEstado">Estado:</label> <input type="text" name></p>
-                        <p><label for="cCidade">Cidade:</label> <input type="text"></p>
+                        <p>
+                            <label for="cLog">Logradouro:</label>
+                            <input type="text" name="tLog" id="cLog" placeholder="Ex: Rua, av, Trav">
+                        </p>
+
+                        <p>
+                            <label for="cNum">Número:</label> 
+                            <input type="number" name="tNum" id="cNum" min="0" max="10000" placeholder="Ex:100">
+                        </p> 
+
+                        <p>
+                            <label for="cEst">Estado:</label> 
+                            <select  name="tEst" id="cEst">
+                                <optgroup label="Região Suldeste">
+
+                                        <option value="RJ">Rio de Janeiro</option> 
+                                        <option value="SP">São Paulo</option> 
+                                        <option selected value="MG">Minas Gerais</option> 
+                                </optgroup>
+
+                                <optgroup label="Região Sul">
+
+                                        <option value="PR">Paraná</option> 
+                                        <option value="SC">Santa Catarina</option> 
+                                        <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+
+                            </select>
+                        </p>
+
+                        <p>
+                        
+                            <label for="cCid">Cidade:</label> 
+                            <input type="text" nome="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades">
+                        </p>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Iguaçu"></option>
+                            <option value="Nitéroi"></option>
+                            <option value="Belford Roxo"></option>
+
+                        </datalist>
                     </fieldset>
                     
                     <fieldset id="mensagem">
 
                         <legend>Mensagem do Usuário</legend>
-                        Grau de Urgência:
-                        Mensagem:
+
+                        <p>
+                            <label for="cUrg">Grau de Urgência:</label>Mín
+                            <input type="range" name="tUrg" id="CUrg" min="0" max="10" step="2">Máx
+                        </p>
+
+                        <p>
+                            <label for="cMsg">Mensagem:</label>
+                            <textarea name="tMsg" id="cMsg" placeholder="Digite sua mensagem" cols="45" rows="4" >
+
+                            </textarea>
+                        </p>
                     </fieldset>
 
                     <fieldset id="pedido">
 
                         <legend>Quero um Google Glass</legend>
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
+
+                        <p>
+                            <input type="checkbox" nome="tCompra" id="cCompra" checked>
+                            <label for="cCompra">Gostaria de adquirir um Google Glass quando disponível<label>
+                        </p>
+                        <p>
+                            <label for="cCor">Cor:</label>
+                            <input type="color" nome="tCor" id="cCor" value="#0000FF">
+                        </p>
+                        
+                        <p>
+                            <label for="cQtd">Quantidade:</label>
+                            <input type="number" nome="tQtd" id="cQtd" min="1" max="100" value="0">
+                        </p>
+                        
+                        <p>
+                            <label for="cTot">Preço Total:</label>
+                            <input type="text" nome="tTot" id="cTot" placeholder="R$" readonly>
+                        </p> 
 
 
-                        [BOTÃO ENVIAR]
+                        <input type="image" name="tEnviar" src="./_imagens/botao-enviar.png">
                     </fieldset>
                     
                 </form>
@@ -114,7 +200,9 @@
         </section>        
 
         <footer id="rodape"> <!-- Rodapé da página -->
-            <p>Copyright 2013 - by Gustavo Guanabara <br> <br> <a href="https://www.facebook.com/CursosEmVideo/?locale=pt_BR" target="_blank">Facebook</a>  |<a href="https://x.com/cursosemvideo" target="_blank">Twitter</a> </p>
+
+            <p>Copyright 2013 - by Gustavo Guanabara <br> <br> 
+            <a href="https://www.facebook.com/CursosEmVideo/?locale=pt_BR" target="_blank">Facebook</a>  |<a href="https://x.com/cursosemvideo" target="_blank">Twitter</a> </p>
         </footer>
     </div>
 
